@@ -1,0 +1,10 @@
+{
+    "require": {
+      "steampixel/simple-php-router": "^0.7.0",
+      "ext-pdo": "*",
+      "doctrine/orm": "*",
+      "symfony/yaml": "2.*",
+      "symfony/cache": "^5.3",
+      "doctrine/annotations": "^1.13"
+    }
+}

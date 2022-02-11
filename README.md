@@ -1,2 +1,2 @@
 # usersapp
-This is a small project to manage operations with a users table
+This is a basic app to create, read and update users
