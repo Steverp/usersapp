@@ -4,11 +4,13 @@ namespace src\classes;
 
 use JetBrains\PhpStorm\Pure;
 use src\entity\User;
+use Interface\UserManagementInterface;
 
 require_once '../config/DbConnection.php';
 require_once '../src/Entity/User.php';
+require_once '../src/Interface/UserManagementInterface.php';
 
-class UserManagement
+class UserManagement implements UserManagementInterface
 {
     #[Pure]
     public function __construct(public $dbConnection = new \DbConnection())
@@ -44,7 +46,7 @@ class UserManagement
         }
     }
 
-    public function updateUser()
+    public function updateUser(): string
     {
         try {
             $entityManager = $this->dbConnection->getDbConnection();
@@ -58,7 +60,7 @@ class UserManagement
         }
     }
 
-    public function deleteUser()
+    public function deleteUser(): string
     {
         try{
             $entityManager = $this->dbConnection->getDbConnection();
