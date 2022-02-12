@@ -1,11 +1,14 @@
 <?php
 // Autoload files using composer
 require_once '../vendor/autoload.php';
-require_once '../src/controller/UserManagement.php';
+require_once '../src/Controller/UserManagement.php';
 
 use \src\classes\UserManagement;
 
-$userManagement = new UserManagement();
+var_dump($_SERVER['REQUEST_URI']);
+die;
 
-var_dump($userManagement->updateUser());
+//$userManagement = new UserManagement();
+//
+//var_dump($userManagement->updateUser());
 
