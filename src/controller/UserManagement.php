@@ -2,6 +2,7 @@
 
 namespace src\classes;
 
+use JetBrains\PhpStorm\Pure;
 use src\entity\User;
 
 require_once '../config/DbConnection.php';
@@ -9,6 +10,7 @@ require_once '../src/Entity/User.php';
 
 class UserManagement
 {
+    #[Pure]
     public function __construct(public $dbConnection = new \DbConnection())
     {
     }
