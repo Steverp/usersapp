@@ -1,0 +1,15 @@
+{{ block("header", "header.html.twig") }}
+<div>
+    <form action="/login-user" enctype="multipart/form-data" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="userEmail">Email</label>
+        <input type="email" id="userEmail" name="userEmail" placeholder="Email address" required autofocus>
+        <label for="userPassword">Password</label>
+        <input type="password" id="userPassword" name="userPassword" placeholder="Password" required>
+
+        <div>
+            <button type="submit">Sign in</button>
+        </div>
+    </form>
+    <span>The login process can take few seconds, please wait.</span>
+</div>

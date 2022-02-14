@@ -1,0 +1,26 @@
+<div>
+    <form action="register-user" enctype="multipart/form-data" method="post">
+        <label for="documentNumber">Document Number</label>
+        <input type="number" id="documentNumber" placeholder="Document Number" name="documentNumber" required>
+        <label for="userName">Name</label>
+        <input type="text" id="userName" placeholder="User name" name="userName" required>
+        <label for="userEmail">User Email</label>
+        <input type="text" id="userEmail" placeholder="User Email" name="userEmail" required>
+        <label for="userCountry">User Country</label>
+        <select name="userCountry" id="userCountry">
+            {% for country in countries %}
+                <option value="{{ country.name }}">{{ country.name }}</option>
+            {% endfor %}
+        </select>
+        <label for="userPassword">User Password</label>
+        <input type="password" id="userPassword" name="userPassword" required>
+        <input type="submit" value="Register">
+    </form>
+    <ul>
+        {% if errors is defined %}
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+</div>
