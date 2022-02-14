@@ -56,5 +56,20 @@ php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/html/composer
 
 
+After this we need to execute in our root folder of our project the next command:
+
+composer install
+
+Also its necessary to execute the sql file in a sql client it could be workbenc
+
+After this we will open in the browser the next url
+
+usersapp.local.com
+
+it will show us the login and sign in options, so we will click on register and put the requested information, then it will redirect us to the list of customer, so, in the search input we can find customer by email and first name
+
+It will take few seconds because the json mockup its really slow to load, I think that its because of the hosting
+
+PLease if you have any question, let me know, thank!
 
 
