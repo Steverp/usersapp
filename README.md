@@ -39,4 +39,22 @@ With these ones, we say to Linux to allow the rewrite module to make friendly ur
 sudo a2enmod rewrite
 sudo a2enmod headers
 
+Then, restart Apache server
+
+sudo service apache2 restart
+
+THen we can proceed and install composer dependencies
+
+first of all we will need to install composer:
+
+Before all this process we have to move to our Downloads folder to make the process
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/html/composer
+
+
+
 
