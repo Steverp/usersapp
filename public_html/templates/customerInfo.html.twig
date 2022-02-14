@@ -1,0 +1,10 @@
+{% block customerInfo %}
+    {% for customer in individualUser %}
+        <h3>{{ customer.first_name }}</h3>
+        <h3>{{ customer.last_name }}</h3>
+        <h3>{{ customer.email }}</h3>
+        <h3>{{ customer.document }}</h3>
+        <h3>{{ customer.phone_number }}</h3>
+        <hr>
+    {% endfor %}
+{% endblock %}

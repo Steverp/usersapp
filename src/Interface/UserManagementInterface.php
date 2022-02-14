@@ -7,7 +7,7 @@ interface UserManagementInterface
 
     public function getUsers(): array|string;
 
-    public function createUser(): string;
+    public function createUser($userToRegister): string|array;
 
     public function updateUser(): string;
 

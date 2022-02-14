@@ -17,8 +17,11 @@ class RequestsHelper
         try{
             $request = $this->client->request(
                 $requestInfo['requestMethod'],$requestInfo['requestUrl']
-            )->getBody();
-            return json_decode($request, true);
+            );
+
+            if($request->getStatusCode() == 200){
+                return json_decode($request->getBody(), true);
+            }
         }catch (\Throwable $th){
             return $th->getMessage();
         }

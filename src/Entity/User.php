@@ -17,9 +17,31 @@ class User
      */
     protected int $user_id;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer")
      */
     protected int $user_document;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected string $user_name;
+
+    /**
+     * @return string
+     */
+    public function getUserName(): string
+    {
+        return $this->user_name;
+    }
+
+    /**
+     * @param string $user_name
+     */
+    public function setUserName(string $user_name): void
+    {
+        $this->user_name = $user_name;
+    }
+
     /**
      * @ORM\Column(type="string")
      */

@@ -1,0 +1,15 @@
+{% block header %}
+    <header>
+        {% if not userData.userLogged %}
+        <a href="login-form">
+            Login
+        </a>
+        <a href="register">
+            Register
+        </a>
+        {% else %}
+            <h2>{{ userData.responseMessage }}</h2>
+            <a href="logout">Log out</a>
+        {% endif %}
+    </header>
+{% endblock %}
