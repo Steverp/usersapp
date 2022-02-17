@@ -20,6 +20,7 @@ class UserAuthProcess extends DbConnection
     public function loginUser(array $userData): array|string
     {
         try{
+
             $this->responseMessage = 'The login information was incorrect';
             $this->statusCode = 412;
 

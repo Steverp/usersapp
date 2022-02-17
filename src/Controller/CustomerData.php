@@ -34,6 +34,7 @@ class CustomerData
     public function getOneCustomer($valueToSearch): array|string
     {
         try{
+
             $valueToSearch = $valueToSearch['searchCustomer'];
             return array_filter($_SESSION['customersList']['objects'], function ($value) use($valueToSearch){
                 return ($value['first_name'] == $valueToSearch) ? $value : ($value['email'] == $valueToSearch ? $value : '');
